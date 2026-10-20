@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Outfit', sans-serif;
+  --color-brand-blue: #00d2fe;
+  --color-brand-blue-hover: #00b4d8;
+  --color-dark: #0a0a0a;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism base classes */
+.glass {
+  background: rgba(18, 18, 18, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #cccccc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-blue);
+}
+
+/* Text constraints for layout compliance */
+.max-w-heading {
+  max-width: 600px;
+}
+
+.max-w-paragraph {
+  max-width: 500px;
+}
+
+/* Custom glow animations */
+.glow-brand-blue {
+  box-shadow: 0 0 20px rgba(0, 210, 254, 0.25);
+}
+
+.glow-brand-blue-hover:hover {
+  box-shadow: 0 0 30px rgba(0, 210, 254, 0.45);
+}
+
+/* Custom font sizes for typography requirements */
+h1 {
+  font-family: var(--font-serif);
+  font-weight: 580;
+  font-size: clamp(2.25rem, 6vw, 5rem);
+  /* Adjusted minimum bound for mobile responsiveness */
+  line-height: 1.1;
+}
+
+.hero-heading {
+  font-family: var(--font-serif);
+  font-weight: 580 !important;
+  font-size: clamp(2.25rem, 6vw, 5rem) !important;
+  /* Adjusted minimum bound for mobile responsiveness */
+  line-height: 1.1;
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-weight: 540;
+  font-size: clamp(1.75rem, 4.5vw, 3.5rem);
+  /* Adjusted minimum bound for mobile responsiveness */
+  line-height: 1.2;
+}
+
+.section-heading {
+  font-family: var(--font-serif);
+  font-weight: 540 !important;
+  font-size: clamp(1.75rem, 4.5vw, 3.5rem) !important;
+  /* Adjusted minimum bound for mobile responsiveness */
+  line-height: 1.2;
+}
+
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 520;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  /* Adjusted minimum bound for mobile responsiveness */
+  line-height: 1.3;
+}
+
+.card-heading {
+  font-family: var(--font-serif);
+  font-weight: 520 !important;
+  font-size: clamp(1.25rem, 2vw, 1.5rem) !important;
+  /* Adjusted to a cleaner, smaller size */
+  line-height: 1.3;
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  /* Adjusted minimum bound for mobile responsiveness */
+  line-height: 1.3;
+}
+
+p {
+  font-family: var(--font-sans);
+  font-weight: 410;
+  /* within 400-430 range */
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  /* 0.9 to 1.2 rem */
+  line-height: 1.6;
+}
+
+.body-text {
+  font-family: var(--font-sans);
+  font-weight: 410 !important;
+  /* within 400-430 range */
+  font-size: clamp(0.9rem, 2vw, 1.2rem) !important;
+  /* 0.9 to 1.2 rem */
+  line-height: 1.6;
+}
+
+/* Helper styles for rest of spec */
+.subheading-text,
+.lead-text {
+  font-weight: 480 !important;
+  /* 450-500 */
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem) !important;
+}
+
+button,
+.btn,
+a.bg-brand-blue,
+a.bg-transparent {
+  font-weight: 510;
+}
+
+.button-text {
+  font-weight: 510 !important;
+  /* 500-520 */
+  font-size: clamp(0.9rem, 2vw, 1.2rem) !important;
+}
+
+label {
+  font-weight: 480;
+}
+
+.nav-link {
+  font-weight: 480 !important;
+}
+
+caption {
+  font-weight: 400;
+}
+
+.caption-text,
+.small-text {
+  font-weight: 400 !important;
+  font-size: clamp(0.75rem, 1.5vw, 1rem) !important;
+}
+
+strong,
+b,
+.bold-inline {
+  font-weight: 500 !important;
+}
+
+/* Card hover animation */
+.hover-card-trigger {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-card-trigger:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-brand-blue);
+}
+
+/* Active navigation links styling overrides */
+.nav-link.active-nav {
+  color: var(--color-brand-blue) !important;
+  border-color: var(--color-brand-blue) !important;
+}
+
+/* High z-index enforcement for mobile drawer menu */
+#mobile-menu {
+  z-index: 100 !important;
+}
+
+/* Footer typography and spacing overrides for premium legibility */
+footer .text-xs,
+footer p.text-xs,
+footer span.text-xs,
+footer a.text-xs {
+  font-size: 1.02rem !important;
+  /* Clear, readable body size */
+  line-height: 1.8 !important;
+  /* Proper line spacing to prevent congestion */
+}
+
+/* Headings inside footer */
+footer h4.text-xs {
+  font-size: 1.15rem !important;
+  /* Distinct and slightly larger headings */
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  color: var(--color-dark) !important;
+  margin-bottom: 1.25rem !important;
+  display: block;
+}
+
+html.dark footer h4.text-xs {
+  color: #ffffff !important;
+}
+
+/* Separate list items cleanly */
+footer ul.space-y-2 {
+  margin-top: 0.75rem !important;
+}
+
+footer ul.space-y-2 li {
+  margin-bottom: 0.75rem !important;
+  /* Proper vertical gap between links */
+}
+
+/* Footer newsletter inputs should keep a balanced text size */
+footer input.text-xs,
+footer button.text-xs {
+  font-size: 0.9rem !important;
+  line-height: 1.2 !important;
+}
+
+/* Back to Top button styling */
+#back-to-top {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+  /* text-gray-800 */
+  border: 1px solid #e5e7eb !important;
+  /* border-gray-200 */
+  border-radius: 9999px !important;
+  width: 48px !important;
+  height: 48px !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.3s ease !important;
+}
+
+html.dark #back-to-top {
+  background-color: #161616 !important;
+  /* dark:bg-charcoal-800 */
+  color: #f3f4f6 !important;
+  /* dark:text-gray-100 */
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+#back-to-top:hover {
+  background-color: var(--color-brand-blue) !important;
+  color: #ffffff !important;
+  border-color: var(--color-brand-blue) !important;
+  transform: translateY(-4px) scale(1.05) !important;
+}
+
+/* Viewport-specific inner hero adjustments */
+@media (min-width: 1024px) {
+  .inner-hero {
+    min-height: 40vh !important;
+    padding-top: 7.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+}
+
+/* Header navigation spacing fix */
+@media (min-width: 1024px) {
+  header nav {
+    display: flex !important;
+    gap: 1.25rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  header nav {
+    gap: 2rem !important;
+  }
+}
+
+/* Footer newsletter input layout */
+#newsletter-form .relative input[type="email"] {
+  padding-right: 5rem !important;
+  padding-left: 1.25rem !important;
+}
+
+#newsletter-form .relative button[type="submit"] {
+  right: 0.375rem !important;
+  left: auto !important;
+}
+
+/* FAQ Accordion typography */
+details summary {
+  gap: 1rem !important;
+}

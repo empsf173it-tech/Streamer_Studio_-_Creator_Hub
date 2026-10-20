@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamCast | About Me</title>
+  <meta name="description" content="Learn about my freelance podcast production studio's story, mission, and values. Dedicated to helping business and creator podcasters sound their best.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'brand-blue': {
+              DEFAULT: '#00d2fe',
+              hover: '#00b4d8',
+              dark: '#0096c7',
+            },
+            'charcoal': {
+              900: '#0a0a0a',
+              800: '#161616',
+              700: '#1f1f1f',
+              600: '#2e2e2e',
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['Outfit', 'sans-serif'],
+          },
+          fontWeight: {
+            light: '300',
+            normal: '410',
+            medium: '500',
+            semibold: '520',
+            bold: '500',
+            extrabold: '540',
+            black: '580',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white dark:bg-charcoal-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+  <!-- NAVBAR -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 bg-white dark:bg-[#0a0a0a]/95 border-b border-gray-200 dark:border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2 gap-2 text-white font-serif tracking-widest text-xl md:text-2xl font-bold">
+          <span class="text-brand-blue">
+            <i class="fas fa-microphone"></i>
+          </span>
+          <span class="text-gray-900 dark:text-white">STREAMCAST</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-4 xl:gap-8 lg:mx-6 xl:mx-10">
+          <a href="index.html" class="nav-link font-medium text-sm tracking-wider uppercase text-gray-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue transition-colors py-2 border-b-2 border-transparent">Home</a>
+          <a href="about.html" class="nav-link font-medium text-sm tracking-wider uppercase text-gray-900 dark:text-white hover:text-brand-blue transition-colors py-2 border-b-2 border-transparent">About</a>
+          <a href="programs.html" class="nav-link font-medium text-sm tracking-wider uppercase text-gray-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue transition-colors py-2 border-b-2 border-transparent">Packages</a>
+          <a href="coaches.html" class="nav-link font-medium text-sm tracking-wider uppercase text-gray-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue transition-colors py-2 border-b-2 border-transparent">Experience</a>
+          
+          <a href="blog.html" class="nav-link font-medium text-sm tracking-wider uppercase text-gray-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue transition-colors py-2 border-b-2 border-transparent">Insights</a>
+        </nav>
+
+        <!-- Right Action Items (Buttons & Toggles) -->
+        <div class="hidden lg:flex items-center space-x-4 gap-2">
+          
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn text-gray-600 dark:text-white focus:outline-none p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors" title="Toggle Theme">
+            <i class="theme-toggle-icon fas fa-sun text-yellow-400"></i>
+          </button>
+
+          <div class="h-6 w-px bg-gray-200 dark:bg-gray-700/50"></div>
+
+          <a href="contact.html" class="bg-brand-blue hover:bg-brand-blue-hover text-black font-semibold text-xs tracking-widest uppercase px-5 py-2.5 rounded-full transition-all duration-300 shadow-md">Book</a>
+          
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden flex items-center space-x-4 gap-2">
+          <button id="mobile-menu-btn" class="text-gray-800 dark:text-white hover:text-brand-blue focus:outline-none p-2 rounded-md transition-colors" aria-label="Open Menu">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="fixed inset-y-0 right-0 z-[100] w-full max-w-xs bg-white/95 dark:bg-charcoal-900/95 backdrop-blur-md shadow-2xl p-6 border-l border-gray-200 dark:border-white/10 transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-between">
+    <div>
+      <div class="flex items-center justify-between mb-8">
+        <a href="index.html" class="flex items-center space-x-2 gap-2 text-gray-900 dark:text-white font-serif tracking-widest text-lg font-bold group">
+          <i class="fas fa-microphone text-brand-blue"></i>
+          <span class="text-gray-900 dark:text-white">STREAMCAST</span>
+        </a>
+        <button id="mobile-menu-close-btn" class="text-gray-800 dark:text-white hover:text-brand-blue p-2 focus:outline-none" aria-label="Close Menu">
+          <i class="fas fa-times text-2xl"></i>
+        </button>
+      </div>
+
+      <nav class="flex flex-col space-y-4">
+        <a href="index.html" class="nav-link text-base font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-blue transition-colors py-1 border-b border-gray-100 dark:border-white/5">Home</a>
+        <a href="about.html" class="nav-link text-base font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-blue transition-colors py-1 border-b border-white/5">About</a>
+        <a href="programs.html" class="nav-link text-base font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-blue transition-colors py-1 border-b border-gray-100 dark:border-white/5">Packages</a>
+        <a href="coaches.html" class="nav-link text-base font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-blue transition-colors py-1 border-b border-white/5">Experience</a>
+        
+        <a href="blog.html" class="nav-link text-base font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-blue transition-colors py-1 border-b border-white/5">Insights</a>
+      </nav>
+    </div>
+
+    <div class="mt-8 pt-6 border-t border-gray-200 dark:border-white/10 flex flex-col space-y-4">
+      <div class="flex items-center justify-center py-2 bg-gray-100 dark:bg-black/25 rounded-xl border border-gray-200 dark:border-white/5">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle-btn text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue focus:outline-none p-2 rounded-full transition-colors flex items-center gap-2 text-sm font-semibold" title="Toggle Theme">
+          <i class="theme-toggle-icon fas fa-sun text-yellow-500 dark:text-yellow-400"></i>
+          <span>Theme</span>
+        </button>
+      </div>
+      <a href="contact.html" class="block text-center py-2.5 bg-brand-blue hover:bg-brand-blue-hover text-black font-semibold rounded-full shadow-lg transition-all">Book</a>
+    </div>
+  </div>
+
+  <!-- ABOUT HERO SECTION -->
+  <section class="inner-hero relative min-h-[60vh] flex items-center justify-center pt-40 md:pt-48 pb-16 overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.95)), url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=1920&q=80');">
+    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900 to-transparent"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span class="text-brand-blue font-semibold text-xs uppercase tracking-widest block">Crafting Audio Since 2016</span>
+      <h1 class="hero-heading text-white max-w-heading mx-auto">About My Studio</h1>
+      <p class="body-text text-gray-300 max-w-paragraph mx-auto">
+        Discover the story, values, and passion that drive me to help podcasters sound their absolute best.
+      </p>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="py-24 bg-white dark:bg-charcoal-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Story Text -->
+        <div class="space-y-6">
+          <span class="text-brand-blue font-semibold text-xs uppercase tracking-widest block">Founder Journey & Vision</span>
+          <h2 class="section-heading text-gray-900 dark:text-white max-w-heading">My Story</h2>
+          <div class="space-y-6 text-gray-600 dark:text-gray-400 leading-relaxed text-sm md:text-base">
+            <p>
+            My studio was founded with a single mission: to remove the technical barrier between great podcast ideas and world-class audio. I believe every voice deserves to be heard clearly, professionally, and consistently.
+          </p>
+          
+          <div class="pt-4 flex items-center space-x-6 gap-2">
+            <div class="border-l-4 border-brand-blue pl-4">
+              <p class="font-serif font-bold text-lg text-gray-900 dark:text-white">"Great podcasts start with great production."</p>
+              <p class="text-xs text-gray-500 mt-1">&mdash; Alex Rivera, Studio Founder</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- Studio Image -->
+        <div class="relative">
+          <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-blue/20 to-purple-500/10 blur opacity-40"></div>
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl p-1 bg-white/5 border border-white/10">
+            <img src="https://img.magnific.com/premium-photo/medium-closeup-portrait-young-middle-eastern-influencer-wearing-headphones-creating-content-b_622301-3038.jpg?semt=ais_hybrid&w=740&q=80" alt="Podcast production studio" class="w-full h-[380px] object-cover rounded-xl">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MISSION SECTION -->
+  <section class="py-24 bg-slate-50 dark:bg-charcoal-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Left: Image layout -->
+        <div class="order-2 lg:order-1 relative">
+          <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-blue/30 to-cyan-500/20 blur opacity-40"></div>
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl p-1 bg-white/5 border border-white/10">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdHnH7uPK-f9iyCu4mTZWMfiKW8yW2PJXwdZ-KbMtlJviJrvaEE84903Rh&s=10" alt="Audio editing session" class="w-full h-[380px] object-cover rounded-xl">
+          </div>
+        </div>
+
+        <!-- Right: Mission text -->
+        <div class="order-1 lg:order-2 space-y-6">
+          <span class="text-brand-blue font-semibold text-xs uppercase tracking-widest block">Core Philosophy</span>
+          <h2 class="section-heading text-gray-900 dark:text-white max-w-heading">My Mission</h2>
+          <div class="space-y-6 text-gray-600 dark:text-gray-400 leading-relaxed text-sm md:text-base">
+            <p>
+            I strive to be the go-to production partner for business podcasters and independent creators — offering speed, quality, and personal service that larger production agencies simply can't match.
+          </p>
+          <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-300">
+            <li class="flex items-center gap-2"><i class="fas fa-circle-check text-brand-blue"></i> Deliver studio-quality audio every single episode</li>
+            <li class="flex items-center gap-2"><i class="fas fa-circle-check text-brand-blue"></i> Support creators with content strategy and show notes</li>
+            <li class="flex items-center gap-2"><i class="fas fa-circle-check text-brand-blue"></i> Distribute to every major podcast platform seamlessly</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CORE VALUES -->
+  <section class="py-24 bg-white dark:bg-charcoal-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-16 space-y-4">
+        <span class="text-brand-blue font-semibold text-xs uppercase tracking-widest block">Quality & Integrity</span>
+        <h2 class="section-heading text-gray-900 dark:text-white max-w-heading mx-auto">Core Values</h2>
+        <p class="body-text text-gray-600 dark:text-gray-400 max-w-paragraph mx-auto">
+          Great audio is built on great principles. These four pillars guide everything I create.
+        </p>
+      </div>
+
+      <!-- Values Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Value 1 -->
+        <div class="bg-slate-50 dark:bg-charcoal-800 border border-gray-100 dark:border-white/5 p-8 rounded-2xl shadow-sm text-center hover-card-trigger space-y-4">
+          <div class="w-14 h-14 mx-auto rounded-xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue text-xl">
+            <i class="fas fa-headphones"></i>
+          </div>
+          <h3 class="card-heading text-gray-900 dark:text-white">Audio Quality</h3>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            Every episode is polished to broadcast quality — no exceptions, no shortcuts.
+          </p>
+        </div>
+
+        <!-- Value 2 -->
+        <div class="bg-slate-50 dark:bg-charcoal-800 border border-gray-100 dark:border-white/5 p-8 rounded-2xl shadow-sm text-center hover-card-trigger space-y-4">
+          <div class="w-14 h-14 mx-auto rounded-xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue text-xl">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3 class="card-heading text-gray-900 dark:text-white">Client Partnership</h3>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            I am an extension of your team, fully invested in the success of your show.
+          </p>
+        </div>
+
+        <!-- Value 3 -->
+        <div class="bg-slate-50 dark:bg-charcoal-800 border border-gray-100 dark:border-white/5 p-8 rounded-2xl shadow-sm text-center hover-card-trigger space-y-4">
+          <div class="w-14 h-14 mx-auto rounded-xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue text-xl">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3 class="card-heading text-gray-900 dark:text-white">Reliability</h3>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            Consistent 48-hour turnarounds you can plan your publishing schedule around.
+          </p>
+        </div>
+
+        <!-- Value 4 -->
+        <div class="bg-slate-50 dark:bg-charcoal-800 border border-gray-100 dark:border-white/5 p-8 rounded-2xl shadow-sm text-center hover-card-trigger space-y-4">
+          <div class="w-14 h-14 mx-auto rounded-xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue text-xl">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3 class="card-heading text-gray-900 dark:text-white">Growth Focus</h3>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            I track your show's performance and proactively suggest improvements to grow your audience.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS & STATS SECTION -->
+  <section id="achievements" class="py-24 bg-slate-50 dark:bg-charcoal-800 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center mb-16 space-y-4">
+        <span class="text-brand-blue font-semibold text-xs uppercase tracking-widest block">By The Numbers</span>
+        <h2 class="section-heading text-gray-900 dark:text-white max-w-heading mx-auto">Studio Achievements</h2>
+        <p class="body-text text-gray-600 dark:text-gray-400 max-w-paragraph mx-auto">
+          Years of proven results, satisfied clients, and thousands of podcast episodes produced at the highest quality.
+        </p>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <!-- Stat 1 -->
+        <div class="stat-card group relative bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-2xl p-8 text-center shadow-sm overflow-hidden hover:shadow-xl transition-all duration-500">
+          <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-brand-blue/10 border border-brand-blue/25 flex items-center justify-center text-brand-blue text-2xl">
+              <i class="fas fa-podcast"></i>
+            </div>
+            <div class="stat-number text-4xl font-serif font-bold text-gray-900 dark:text-white mb-1" data-target="2400">0</div>
+            <div class="text-brand-blue text-2xl font-bold mb-2">+</div>
+            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-semibold">Episodes Produced</p>
+          </div>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="stat-card group relative bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-2xl p-8 text-center shadow-sm overflow-hidden hover:shadow-xl transition-all duration-500">
+          <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-brand-blue/10 border border-brand-blue/25 flex items-center justify-center text-brand-blue text-2xl">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-number text-4xl font-serif font-bold text-gray-900 dark:text-white mb-1" data-target="180">0</div>
+            <div class="text-brand-blue text-2xl font-bold mb-2">+</div>
+            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-semibold">Happy Clients</p>
+          </div>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="stat-card group relative bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-2xl p-8 text-center shadow-sm overflow-hidden hover:shadow-xl transition-all duration-500">
+          <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-brand-blue/10 border border-brand-blue/25 flex items-center justify-center text-brand-blue text-2xl">
+              <i class="fas fa-share-nodes"></i>
+            </div>
+            <div class="stat-number text-4xl font-serif font-bold text-gray-900 dark:text-white mb-1" data-target="20">0</div>
+            <div class="text-brand-blue text-2xl font-bold mb-2">+</div>
+            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-semibold">Platforms Covered</p>
+          </div>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="stat-card group relative bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-2xl p-8 text-center shadow-sm overflow-hidden hover:shadow-xl transition-all duration-500">
+          <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-brand-blue/10 border border-brand-blue/25 flex items-center justify-center text-brand-blue text-2xl">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="stat-number text-4xl font-serif font-bold text-gray-900 dark:text-white mb-1" data-target="8">0</div>
+            <div class="text-brand-blue text-2xl font-bold mb-2">+</div>
+            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-semibold">Years of Excellence</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievement Badges Row -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="flex items-center gap-4 bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-2xl p-5 shadow-sm">
+          <div class="w-12 h-12 shrink-0 rounded-xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue text-lg">
+            <i class="fas fa-headphones"></i>
+          </div>
+          <div>
+            <p class="font-serif font-bold text-gray-900 dark:text-white text-sm">Chart-Topping Shows</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">12 client shows reached Apple Podcasts Top 100</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-2xl p-5 shadow-sm">
+          <div class="w-12 h-12 shrink-0 rounded-xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue text-lg">
+            <i class="fas fa-star"></i>
+          </div>
+          <div>
+            <p class="font-serif font-bold text-gray-900 dark:text-white text-sm">5-Star Reviews</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Consistently 5-star rated by clients worldwide</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-2xl p-5 shadow-sm">
+          <div class="w-12 h-12 shrink-0 rounded-xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue text-lg">
+            <i class="fas fa-microphone"></i>
+          </div>
+          <div>
+            <p class="font-serif font-bold text-gray-900 dark:text-white text-sm">Full Production Service</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Recording through distribution, all in one place</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials" class="py-24 bg-white dark:bg-charcoal-900 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-brand-blue/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center mb-16 space-y-4">
+        <span class="text-brand-blue font-semibold text-xs uppercase tracking-widest block">Client Voices</span>
+        <h2 class="section-heading text-gray-900 dark:text-white max-w-heading mx-auto">What My Clients Say</h2>
+        <p class="body-text text-gray-600 dark:text-gray-400 max-w-paragraph mx-auto">
+          Hear directly from podcasters who have experienced the difference my production makes to their shows.
+        </p>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+
+        <!-- Testimonial 1 -->
+        <div class="group relative flex flex-col h-full bg-slate-50 dark:bg-charcoal-800 border border-gray-100 dark:border-white/5 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-400 overflow-hidden md:col-span-6 lg:col-span-4">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-blue to-cyan-300 rounded-t-2xl"></div>
+          <div class="text-brand-blue/25 text-7xl font-serif leading-none mb-4 select-none">&ldquo;</div>
+          <div class="flex gap-1 mb-4 -mt-6">
+            <i class="fas fa-star text-brand-blue text-xs"></i>
+            <i class="fas fa-star text-brand-blue text-xs"></i>
+            <i class="fas fa-star text-brand-blue text-xs"></i>
+            <i class="fas fa-star text-brand-blue text-xs"></i>
+            <i class="fas fa-star text-brand-blue text-xs"></i>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6 grow">
+            "Working with this producer took our B2B podcast from sounding amateur to sounding like a major media brand. Their editing is precise, the show notes drive web traffic, and the turnaround time is unmatched!"
+          </p>
+          <div class="flex items-center gap-4 mt-auto pt-4 border-t border-gray-200 dark:border-white/10 h-20">
+            <img src="https://cdn-images-1.medium.com/max/1600/1*cRpjrpCeGSWpYfXHP16BpA.jpeg" alt="Devi Thompson" class="w-12 h-12 rounded-full object-cover border-2 border-brand-blue/30 shrink-0">
+            <div>
+              <p class="font-serif font-bold text-gray-900 dark:text-white text-sm md:text-xs lg:text-sm">Devi Thompson</p>
+              <p class="text-xs md:text-[10px] lg:text-xs text-gray-500 dark:text-gray-400">CEO, Business Spotlight Podcast</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="group relative flex flex-col h-full bg-slate-50 dark:bg-charcoal-800 border border-gray-100 dark:border-white/5 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-400 overflow-hidden md:col-span-6 lg:col-span-4">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-blue to-cyan-300 rounded-t-2xl"></div>
+          <div class="text-brand-blue/25 text-7xl font-serif leading-none mb-4 select-none">&ldquo;</div>
+          <div class="flex gap-1 mb-4 -mt-6">
+            <i class="fas fa-star text-brand-blue text-xs"></i>
+            <i class="fas fa-star text-brand-blue text-xs"></i>
+            <i class="fas fa-star text-brand-blue text-xs"></i>
+            <i class="fas fa-star text-brand-blue text-xs"></i>
+            <i class="fas fa-star text-brand-blue text-xs"></i>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6 grow">
+            "I'm a solo creator with no production background. Sending my recordings to this producer and getting back polished, distributed episodes within 48 hours has completely changed how I operate my podcast business."
+          </p>
+          <div class="flex items-center gap-4 mt-auto pt-4 border-t border-white/10 h-20">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE8I0unqSQaNtnwcqL_ZZqk3Cfdh_WURCX1hGhZYphvGKVWjmDMh_sGyg&s=10" alt="Sarah Chen" class="w-12 h-12 rounded-full object-cover border-2 border-brand-blue/50 shrink-0">
+            <div>
+              <p class="font-serif font-bold text-gray-900 dark:text-white text-sm md:text-xs lg:text-sm">Kanmani Chen</p>
+              <p class="text-xs md:text-[10px] lg:text-xs text-gray-500 dark:text-gray-400">Creator, The Tech Stories Podcast</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="group relative flex flex-col h-full bg-slate-50 dark:bg-charcoal-800 border border-gray-100 dark:border-white/5 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-400 overflow-hidden md:col-start-4 md:col-span-6 lg:col-span-4 lg:col-start-auto">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-blue to-cyan-300 rounded-t-2xl"></div>
+          <div class="text-brand-blue/25 text-7xl font-serif leading-none mb-4 select-none">&ldquo;</div>
+          <div class="flex gap-1 mb-4 -mt-6">
+            <i class="fas fa-star text-brand-blue text-xs"></i>
+            <i class="fas fa-star text-brand-blue text-xs"></i>
+            <i class="fas fa-star text-brand-blue text-xs"></i>
+            <i class="fas fa-star text-brand-blue text-xs"></i>
+            <i class="fas fa-star-half-alt text-brand-blue text-xs"></i>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6 grow">
+            "Our corporate podcast now sounds polished and professional, exactly what we needed to represent our brand. The show notes have also improved our SEO and drove real inbound leads to our business."
+          </p>
+          <div class="flex items-center gap-4 mt-auto pt-4 border-t border-gray-200 dark:border-white/10 h-20">
+            <img src="https://cdn.realtor.ca/individuals/TS637490207400000000/highres/1296632.jpg" alt="David Patel" class="w-12 h-12 rounded-full object-cover border-2 border-brand-blue/30 shrink-0">
+            <div>
+              <p class="font-serif font-bold text-gray-900 dark:text-white text-sm md:text-xs lg:text-sm">Sunaanya Patel</p>
+              <p class="text-xs md:text-[10px] lg:text-xs text-gray-500 dark:text-gray-400">Host, Finance & Futures Podcast</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA Banner -->
+      <div class="mt-16 relative rounded-2xl overflow-hidden bg-gradient-to-r from-charcoal-900 via-charcoal-800 to-charcoal-900 dark:from-charcoal-800 dark:via-charcoal-700 dark:to-charcoal-800 border border-white/10 p-10 text-center shadow-2xl">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-blue/10 via-transparent to-transparent pointer-events-none"></div>
+        <div class="relative z-10 space-y-4">
+          <i class="fas fa-microphone text-brand-blue text-3xl"></i>
+          <h3 dir="auto" class="font-serif font-bold text-white text-2xl md:text-3xl">Ready to Launch Your Best Season Yet?</h3>
+          <p class="text-gray-400 text-sm max-w-md mx-auto">Join 180+ podcasters who trust me to produce, publish, and grow their shows.</p>
+          <a href="contact.html" class="inline-block mt-4 bg-brand-blue hover:bg-brand-blue-hover text-black font-bold text-sm tracking-widest uppercase px-8 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-brand-blue/30">
+            Get Started <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="bg-slate-50 dark:bg-[#0a0a0a] border-t border-gray-200 dark:border-white/10 py-16 text-gray-700 dark:text-gray-300 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        
+        <!-- Column 1: Branding -->
+        <div class="space-y-4">
+          <a href="index.html" class="flex items-center space-x-2 gap-2 text-gray-900 dark:text-white font-serif tracking-widest text-xl md:text-2xl font-bold group">
+            <i class="fas fa-microphone text-brand-blue"></i>
+            <span class="text-gray-900 dark:text-white">STREAMCAST</span>
+          </a>
+          <p class="text-xs leading-relaxed text-gray-700 dark:text-gray-300">
+            Your premium freelance podcast production partner — offering recording, editing, show notes, and full distribution services for business and creator podcasters.
+          </p>
+          <div class="flex space-x-4 gap-1.5 pt-2">
+            <a href="#" class="text-gray-400 hover:text-brand-blue text-lg transition-colors"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-brand-blue text-lg transition-colors"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-brand-blue text-lg transition-colors"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-brand-blue text-lg transition-colors"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation Links -->
+        <div class="space-y-4">
+          <h4 class="text-gray-900 dark:text-white font-serif font-semibold uppercase tracking-wider text-xs">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-brand-blue transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-brand-blue transition-colors">About Me</a></li>
+            <li><a href="programs.html" class="hover:text-brand-blue transition-colors">Production Packages</a></li>
+            <li><a href="coaches.html" class="hover:text-brand-blue transition-colors">My Experience</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Secondary Links -->
+        <div class="space-y-4">
+          <h4 class="text-gray-900 dark:text-white font-serif font-semibold uppercase tracking-wider text-xs">Resources</h4>
+          <ul class="space-y-2 text-xs">
+            
+            <li><a href="blog.html" class="hover:text-brand-blue transition-colors">Podcast Insights</a></li>
+            <li><a href="contact.html" class="hover:text-brand-blue transition-colors">Contact & Consultation</a></li>
+            
+            <li><a href="contact.html" class="hover:text-brand-blue transition-colors">Get Started</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <div class="space-y-4">
+          <h4 class="text-gray-900 dark:text-white font-serif font-semibold uppercase tracking-wider text-xs">Newsletter</h4>
+          <p class="text-xs text-gray-700 dark:text-gray-300">Get podcast production tips, industry trends, and exclusive guides delivered to your inbox.</p>
+          <form id="newsletter-form" class="space-y-2">
+            <div class="relative">
+              <input type="email" placeholder="Email Address" required class="w-full bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white rounded-full pl-4 pr-20 py-2 text-xs focus:outline-none focus:border-brand-blue">
+              <button type="submit" class="absolute right-1.5 top-1.5 bg-brand-blue hover:bg-brand-blue-hover text-black px-3 py-1 rounded-full text-xs font-bold">Join</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="border-t border-gray-200 dark:border-white/5 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-600 dark:text-gray-400 gap-4">
+        <p>&copy; 2026 StreamCast &mdash; Freelance Podcast Producer & Editor. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-gray-900 dark:hover:text-white">Privacy Policy</a>
+          <a href="#" class="hover:text-gray-900 dark:hover:text-white">Terms of Service</a>
+          <a href="#" class="hover:text-gray-900 dark:hover:text-white">Podcast Agreement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Stat Counter Animation -->
+  <script>
+    (function () {
+      function animateCount(el, target, duration) {
+        let start = 0;
+        const step = Math.ceil(target / (duration / 16));
+        const timer = setInterval(() => {
+          start += step;
+          if (start >= target) { start = target; clearInterval(timer); }
+          el.textContent = start.toLocaleString();
+        }, 16);
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            document.querySelectorAll('.stat-number').forEach(el => {
+              const target = parseInt(el.getAttribute('data-target'), 10);
+              animateCount(el, target, 1800);
+            });
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.3 });
+
+      const section = document.getElementById('achievements');
+      if (section) observer.observe(section);
+    })();
+  </script>
+  <!-- Core JavaScript -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

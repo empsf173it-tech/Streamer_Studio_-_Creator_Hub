@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamCast | My Experience</title>
+  <meta name="description" content="Meet the talented freelance podcast producer — expert audio engineer, show producer, content strategist, and distribution specialist.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'brand-blue': {
+              DEFAULT: '#00d2fe',
+              hover: '#00b4d8',
+              dark: '#0096c7',
+            },
+            'charcoal': {
+              900: '#0a0a0a',
+              800: '#161616',
+              700: '#1f1f1f',
+              600: '#2e2e2e',
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['Outfit', 'sans-serif'],
+          },
+          fontWeight: {
+            light: '300',
+            normal: '410',
+            medium: '500',
+            semibold: '520',
+            bold: '500',
+            extrabold: '540',
+            black: '580',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white dark:bg-charcoal-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+  <!-- NAVBAR -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 bg-white dark:bg-[#0a0a0a]/95 border-b border-gray-200 dark:border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2 gap-2 text-white font-serif tracking-widest text-xl md:text-2xl font-bold">
+          <span class="text-brand-blue">
+            <i class="fas fa-microphone"></i>
+          </span>
+          <span class="text-gray-900 dark:text-white">STREAMCAST</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-4 xl:gap-8 lg:mx-6 xl:mx-10">
+          <a href="index.html" class="nav-link font-medium text-sm tracking-wider uppercase text-gray-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue transition-colors py-2 border-b-2 border-transparent">Home</a>
+          <a href="about.html" class="nav-link font-medium text-sm tracking-wider uppercase text-gray-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue transition-colors py-2 border-b-2 border-transparent">About</a>
+          <a href="programs.html" class="nav-link font-medium text-sm tracking-wider uppercase text-gray-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue transition-colors py-2 border-b-2 border-transparent">Packages</a>
+          <a href="coaches.html" class="nav-link font-medium text-sm tracking-wider uppercase text-gray-900 dark:text-white hover:text-brand-blue transition-colors py-2 border-b-2 border-transparent">Experience</a>
+          
+          <a href="blog.html" class="nav-link font-medium text-sm tracking-wider uppercase text-gray-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue transition-colors py-2 border-b-2 border-transparent">Insights</a>
+        </nav>
+
+        <!-- Right Action Items (Buttons & Toggles) -->
+        <div class="hidden lg:flex items-center space-x-4 gap-2">
+          
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn text-gray-600 dark:text-white focus:outline-none p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors" title="Toggle Theme">
+            <i class="theme-toggle-icon fas fa-sun text-yellow-400"></i>
+          </button>
+
+          <div class="h-6 w-px bg-gray-200 dark:bg-gray-700/50"></div>
+
+          <a href="contact.html" class="bg-brand-blue hover:bg-brand-blue-hover text-black font-semibold text-xs tracking-widest uppercase px-5 py-2.5 rounded-full transition-all duration-300 shadow-md">Book</a>
+          
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden flex items-center space-x-4 gap-2">
+          <button id="mobile-menu-btn" class="text-gray-800 dark:text-white hover:text-brand-blue focus:outline-none p-2 rounded-md transition-colors" aria-label="Open Menu">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="fixed inset-y-0 right-0 z-[100] w-full max-w-xs bg-white/95 dark:bg-charcoal-900/95 backdrop-blur-md shadow-2xl p-6 border-l border-gray-200 dark:border-white/10 transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-between">
+    <div>
+      <div class="flex items-center justify-between mb-8">
+        <a href="index.html" class="flex items-center space-x-2 gap-2 text-gray-900 dark:text-white font-serif tracking-widest text-lg font-bold group">
+          <i class="fas fa-microphone text-brand-blue"></i>
+          <span class="text-gray-900 dark:text-white">STREAMCAST</span>
+        </a>
+        <button id="mobile-menu-close-btn" class="text-gray-800 dark:text-white hover:text-brand-blue p-2 focus:outline-none" aria-label="Close Menu">
+          <i class="fas fa-times text-2xl"></i>
+        </button>
+      </div>
+
+      <nav class="flex flex-col space-y-4">
+        <a href="index.html" class="nav-link text-base font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-blue transition-colors py-1 border-b border-gray-100 dark:border-white/5">Home</a>
+        <a href="about.html" class="nav-link text-base font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-blue transition-colors py-1 border-b border-white/5">About</a>
+        <a href="programs.html" class="nav-link text-base font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-blue transition-colors py-1 border-b border-gray-100 dark:border-white/5">Packages</a>
+        <a href="coaches.html" class="nav-link text-base font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-blue transition-colors py-1 border-b border-white/5">Experience</a>
+        
+        <a href="blog.html" class="nav-link text-base font-semibold text-gray-700 dark:text-gray-300 hover:text-brand-blue transition-colors py-1 border-b border-white/5">Insights</a>
+      </nav>
+    </div>
+
+    <div class="mt-8 pt-6 border-t border-gray-200 dark:border-white/10 flex flex-col space-y-4">
+      <div class="flex items-center justify-center py-2 bg-gray-100 dark:bg-black/25 rounded-xl border border-gray-200 dark:border-white/5">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle-btn text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue focus:outline-none p-2 rounded-full transition-colors flex items-center gap-2 text-sm font-semibold" title="Toggle Theme">
+          <i class="theme-toggle-icon fas fa-sun text-yellow-500 dark:text-yellow-400"></i>
+          <span>Theme</span>
+        </button>
+      </div>
+      <a href="contact.html" class="block text-center py-2.5 bg-brand-blue hover:bg-brand-blue-hover text-black font-semibold rounded-full shadow-lg transition-all">Book</a>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE HERO SECTION -->
+  <section class="inner-hero relative min-h-[60vh] flex items-center justify-center pt-40 md:pt-48 pb-16 overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.95)), url('https://images.unsplash.com/photo-1590602847861-f45433d009a3?auto=format&fit=crop&w=1920&q=80');">
+    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900 to-transparent"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span class="text-brand-blue font-semibold text-xs uppercase tracking-widest block">Expert Production Professional</span>
+      <h1 class="hero-heading text-white max-w-heading mx-auto">My Background</h1>
+      <p class="body-text text-gray-300 max-w-paragraph mx-auto">
+        Discover the experience and expertise I bring to every single podcast episode I produce.
+      </p>
+    </div>
+  </section>
+
+  <!-- LEAD PRODUCER SHOWCASE -->
+  <section class="py-24 bg-white dark:bg-charcoal-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        
+        <!-- Lead Producer Image -->
+        <div class="lg:col-span-5 relative">
+          <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-blue/30 to-cyan-500/20 blur opacity-40"></div>
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl p-1 bg-white/5 border border-white/10 aspect-[4/5]">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ48GG-4Wnj-uNd3dnT9p60ocwOL2_MtVKPmWngSHcjHnuBtTncq2KnKQ4&s=10" alt="Alex Rivera - Lead Producer" class="w-full h-full object-cover rounded-xl">
+          </div>
+        </div>
+
+        <!-- Lead Producer Details -->
+        <div class="lg:col-span-7 space-y-6">
+          <span class="text-brand-blue font-semibold text-xs uppercase tracking-widest block">Producer Profile</span>
+          <h2 class="section-heading text-gray-900 dark:text-white">Alex Rivera</h2>
+          <p class="body-text text-gray-600 dark:text-gray-400">
+            Certified audio engineer and podcast producer with over 10 years of broadcast radio and digital audio experience.
+          </p>
+          
+          <div class="border-t border-b border-gray-100 dark:border-white/5 py-4 grid grid-cols-2 gap-4 text-xs">
+            <div>
+              <p class="text-gray-400 uppercase font-bold text-[10px]">Specialty</p>
+              <p class="font-serif font-bold text-gray-800 dark:text-gray-200 mt-1">Audio Engineering & Editing</p>
+            </div>
+            <div>
+              <p class="text-gray-400 uppercase font-bold text-[10px]">Experience</p>
+              <p class="font-serif font-bold text-gray-800 dark:text-gray-200 mt-1">10+ Years in Audio</p>
+            </div>
+            <div>
+              <p class="text-gray-400 uppercase font-bold text-[10px]">Episodes Produced</p>
+              <p class="font-serif font-bold text-gray-800 dark:text-gray-200 mt-1">2,400+ Episodes</p>
+            </div>
+            <div>
+              <p class="text-gray-400 uppercase font-bold text-[10px]">Certifications</p>
+              <p class="font-serif font-bold text-gray-800 dark:text-gray-200 mt-1">Pro Tools Certified</p>
+            </div>
+          </div>
+
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+            I founded the studio after spending nearly a decade as a broadcast engineer at major radio networks. My production philosophy centers on clarity, consistency, and storytelling — ensuring every client's podcast sounds like it belongs among the top charts.
+          </p>
+
+          <div class="pt-4 flex items-center space-x-6 gap-2">
+            <a href="contact.html" class="bg-brand-blue hover:bg-brand-blue-hover text-black font-bold text-xs tracking-widest uppercase px-6 py-3.5 rounded-full transition-colors">Book a Consultation</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CREDENTIALS SECTION -->
+  <section class="py-24 bg-white dark:bg-charcoal-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+      <div class="space-y-4">
+        <span class="text-brand-blue font-semibold text-xs uppercase tracking-widest block">Why Trust Me</span>
+        <h2 class="section-heading text-gray-900 dark:text-white max-w-heading mx-auto">Studio Credentials</h2>
+        <p class="body-text text-gray-600 dark:text-gray-400 max-w-paragraph mx-auto">
+          I combine technical expertise, creative storytelling, and industry knowledge to deliver exceptional podcast production.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left max-w-5xl mx-auto">
+        
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-charcoal-800 border border-gray-100 dark:border-white/5 flex gap-4 items-start">
+          <i class="fas fa-certificate text-brand-blue text-3xl mt-1"></i>
+          <div>
+            <h4 class="font-serif font-bold text-sm text-gray-900 dark:text-white">Pro Tools Certified</h4>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">I am Avid Pro Tools certified, ensuring the highest technical standards in every mix.</p>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-charcoal-800 border border-gray-100 dark:border-white/5 flex gap-4 items-start">
+          <i class="fas fa-award text-brand-blue text-3xl mt-1"></i>
+          <div>
+            <h4 class="font-serif font-bold text-sm text-gray-900 dark:text-white">Broadcast Experience</h4>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">I bring decades of experience from major broadcast radio and digital media production studios.</p>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-charcoal-800 border border-gray-100 dark:border-white/5 flex gap-4 items-start">
+          <i class="fas fa-chart-line text-brand-blue text-3xl mt-1"></i>
+          <div>
+            <h4 class="font-serif font-bold text-sm text-gray-900 dark:text-white">Proven Growth Results</h4>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">My clients' shows have collectively grown their audience by an average of 215% within 6 months of working with me.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENT TESTIMONIALS -->
+  <section class="py-24 bg-slate-50 dark:bg-charcoal-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-16 space-y-4">
+        <span class="text-brand-blue font-semibold text-xs uppercase tracking-widest block">Track Record of Excellence</span>
+        <h2 class="section-heading text-gray-900 dark:text-white max-w-heading mx-auto">Proven Production Success</h2>
+        <p class="body-text text-gray-600 dark:text-gray-400 max-w-paragraph mx-auto">
+          Read first-hand accounts from creators and hosts who have scaled their shows using my professional editing and engineering services.
+        </p>
+      </div>
+
+      <!-- Testimonial Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        
+        <!-- Review 1 -->
+        <div class="bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-white/5 p-8 rounded-2xl shadow-sm space-y-6 flex flex-col justify-between md:col-span-6 lg:col-span-4">
+          <div class="space-y-4">
+            <div class="flex text-brand-blue gap-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="text-sm italic text-gray-600 dark:text-gray-400 leading-relaxed">
+              "The sound design on our narrative podcast is absolutely critical. Since partnering with this team, our audio quality has reached cinematic levels. Our listeners constantly compliment the immersive soundscapes and crisp narration editing!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80" alt="Emily Watson" class="w-10 h-10 rounded-full object-cover shrink-0">
+            <div>
+              <h4 class="font-semibold text-sm text-gray-900 dark:text-white">Emily Watson</h4>
+              <p class="text-xs text-gray-500 dark:text-gray-400">Host, Shadows of History Podcast</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-white/5 p-8 rounded-2xl shadow-sm space-y-6 flex flex-col justify-between md:col-span-6 lg:col-span-4">
+          <div class="space-y-4">
+            <div class="flex text-brand-blue gap-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="text-sm italic text-gray-600 dark:text-gray-400 leading-relaxed">
+              "I used to spend 10+ hours a week editing raw recordings and writing show notes. Now, I just record and upload. The turnaround is lightning-fast, the edits are completely seamless, and the show notes are ready-to-publish. I've reclaimed my weekends."
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <img src="https://www.mjcpa.com/wp-content/uploads/2018/04/MJPCC-Chattanooga-586-scaled.jpg" alt="Jameson Miller" class="w-10 h-10 rounded-full object-cover shrink-0">
+            <div>
+              <h4 class="font-semibold text-sm text-gray-900 dark:text-white">Jameson Miller</h4>
+              <p class="text-xs text-gray-500 dark:text-gray-400">Host, The Founder's Journey Podcast</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white dark:bg-charcoal-900 border border-gray-200 dark:border-white/5 p-8 rounded-2xl shadow-sm space-y-6 flex flex-col justify-between md:col-start-4 md:col-span-6 lg:col-span-4 lg:col-start-auto">
+          <div class="space-y-4">
+            <div class="flex text-brand-blue gap-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="text-sm italic text-gray-600 dark:text-gray-400 leading-relaxed">
+              "Producing a high-quality B2B podcast requires absolute consistency and premium sound. Not only is the mixing top-notch, but the producer also manages the entire upload pipeline. Our show sounds like a major network broadcast."
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&h=120&q=80" alt="Sofia Rodriguez" class="w-10 h-10 rounded-full object-cover shrink-0">
+            <div>
+              <h4 class="font-semibold text-sm text-gray-900 dark:text-white">Sofia Rodriguez</h4>
+              <p class="text-xs text-gray-500 dark:text-gray-400">Marketing Director, Fintech Insights</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-50 dark:bg-[#0a0a0a] border-t border-gray-200 dark:border-white/10 py-16 text-gray-700 dark:text-gray-300 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        
+        <!-- Column 1: Branding -->
+        <div class="space-y-4">
+          <a href="index.html" class="flex items-center space-x-2 gap-2 text-gray-900 dark:text-white font-serif tracking-widest text-xl md:text-2xl font-bold group">
+            <i class="fas fa-microphone text-brand-blue"></i>
+            <span class="text-gray-900 dark:text-white">STREAMCAST</span>
+          </a>
+          <p class="text-xs leading-relaxed text-gray-700 dark:text-gray-300">
+            Your premium freelance podcast production partner — offering recording, editing, show notes, and full distribution services for business and creator podcasters.
+          </p>
+          <div class="flex space-x-4 gap-1.5 pt-2">
+            <a href="#" class="text-gray-400 hover:text-brand-blue text-lg transition-colors"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-brand-blue text-lg transition-colors"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-brand-blue text-lg transition-colors"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-brand-blue text-lg transition-colors"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation Links -->
+        <div class="space-y-4">
+          <h4 class="text-gray-900 dark:text-white font-serif font-semibold uppercase tracking-wider text-xs">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-brand-blue transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-brand-blue transition-colors">About Me</a></li>
+            <li><a href="programs.html" class="hover:text-brand-blue transition-colors">Production Packages</a></li>
+            <li><a href="coaches.html" class="hover:text-brand-blue transition-colors">My Experience</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Secondary Links -->
+        <div class="space-y-4">
+          <h4 class="text-gray-900 dark:text-white font-serif font-semibold uppercase tracking-wider text-xs">Resources</h4>
+          <ul class="space-y-2 text-xs">
+            
+            <li><a href="blog.html" class="hover:text-brand-blue transition-colors">Podcast Insights</a></li>
+            <li><a href="contact.html" class="hover:text-brand-blue transition-colors">Contact & Consultation</a></li>
+            
+            <li><a href="contact.html" class="hover:text-brand-blue transition-colors">Get Started</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <div class="space-y-4">
+          <h4 class="text-gray-900 dark:text-white font-serif font-semibold uppercase tracking-wider text-xs">Newsletter</h4>
+          <p class="text-xs text-gray-700 dark:text-gray-300">Get podcast production tips, industry trends, and exclusive guides delivered to your inbox.</p>
+          <form id="newsletter-form" class="space-y-2">
+            <div class="relative">
+              <input type="email" placeholder="Email Address" required class="w-full bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white rounded-full pl-4 pr-20 py-2 text-xs focus:outline-none focus:border-brand-blue">
+              <button type="submit" class="absolute right-1.5 top-1.5 bg-brand-blue hover:bg-brand-blue-hover text-black px-3 py-1 rounded-full text-xs font-bold">Join</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="border-t border-gray-200 dark:border-white/5 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-600 dark:text-gray-400 gap-4">
+        <p>&copy; 2026 StreamCast &mdash; Freelance Podcast Producer & Editor. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-gray-900 dark:hover:text-white">Privacy Policy</a>
+          <a href="#" class="hover:text-gray-900 dark:hover:text-white">Terms of Service</a>
+          <a href="#" class="hover:text-gray-900 dark:hover:text-white">Podcast Agreement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
